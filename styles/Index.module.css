@@ -1,0 +1,284 @@
+.section {
+  background-color: #61dbfb;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: 57vw;
+  height: 70vh;
+  margin: auto;
+  margin-top: 120px;
+  background-color: #3a3f49;
+  border-radius: 5px;
+  box-shadow: 20px 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.inputBox {
+  height: 50vh;
+  padding-left: 58px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.inputBox2 {
+  position: relative;
+  top: 25px;
+  padding-right: 20px;
+}
+.inputBox::-webkit-scrollbar {
+  width: 12px;
+  max-height: fit-content;
+}
+
+.inputBox::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+.inputBox::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+
+.navigation {
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.submitTask {
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.taskBox {
+  display: flex;
+  justify-content: space-evenly;
+  animation: moveInButtom 0.5s ease-in;
+}
+
+@keyframes moveInButtom {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  80% {
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.checkbox {
+  position: relative;
+  top: 25px;
+  display: inline;
+}
+
+.input {
+  color: #ffffff;
+}
+
+.delete {
+  position: relative;
+  top: 25px;
+  right: 35px;
+}
+
+.paraLink {
+  /* font-size: 8px; */
+  cursor: pointer;
+  margin: 4px;
+}
+
+.category a {
+  position: relative;
+  top: 20%;
+  bottom: 25px;
+  padding-right: 32px;
+  color: white;
+}
+
+.category a:hover,
+.category a:active,
+.category a:enabled {
+  color: #828791;
+}
+
+.line {
+  position: relative;
+  left: 6%;
+  padding-top: 2rem;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+}
+
+.completedbox {
+  justify-content: space-between;
+  color: #828791;
+  padding-left: 10px;
+  margin-right: 20px;
+}
+
+.item {
+  display: flex;
+  border-bottom: 1px solid #828791;
+  padding: 15px;
+  padding-right: 0px;
+  padding-left: 16px;
+  margin-right: 20px;
+  width: 770px;
+}
+
+.recycle {
+  position: relative;
+  top: 30px;
+}
+
+.para {
+  width: 50vw;
+  padding-bottom: 10px;
+  padding-left: 35px;
+}
+
+@media (max-width: 1250px) {
+  .para {
+    width: 600px;
+    /* padding-bottom: 10px;
+    padding-left: 35px; */
+  }
+}
+
+@media (max-width: 1070px) {
+  .navigation {
+    justify-content: space-between;
+    align-items: flex-end;
+    color: white;
+    font-size: small;
+    padding-left: 10px;
+    padding-right: 0px;
+  }
+
+  .category a {
+    display: flex;
+    color: white;
+    padding-right: 10px;
+  }
+
+  .link2 {
+    /* padding-top: 10px; */
+  }
+
+  .submitTask {
+    margin-left: 0px;
+    /* margin-top: 20px; */
+  }
+
+  .form {
+    display: flex;
+    max-width: 400px;
+  }
+
+  .inputBox {
+    height: 50vh;
+    padding-left: 0px;
+    padding-right: 0px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .taskBox {
+    /* max-width: 400px; */
+  }
+  .para {
+    max-width: 400px;
+    /* padding-bottom: 10px;
+    padding-left: 35px; */
+  }
+}
+
+@media (max-width: 800px) {
+  .navigation {
+    justify-content: space-between;
+    align-items: flex-end;
+    color: white;
+    font-size: small;
+    padding-left: 10px;
+    padding-right: 0px;
+  }
+
+  .category a {
+    position: relative;
+    display: flex;
+    color: white;
+    padding-right: 10px;
+    /* padding-top: 50px; */
+  }
+
+  .link2 {
+    /* padding-top: 10px; */
+  }
+
+  .submitTask {
+    margin-left: 0px;
+    /* margin-top: 20px; */
+  }
+
+  .form {
+    display: flex;
+    max-width: 300px;
+  }
+
+  .inputBox {
+    height: 50vh;
+    padding-left: 0px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .taskBox {
+    justify-content: start;
+  }
+  .para {
+    max-width: 50vw;
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .dateItem {
+    font-size: 10px;
+  }
+
+  .paraLink {
+    font-size: 8px;
+  }
+
+  /* .category a {
+    display: flex;
+    color: white;
+    padding-right: 10px;
+  } */
+}
