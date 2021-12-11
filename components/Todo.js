@@ -16,10 +16,7 @@ import {
 const useStyle = makeStyles({
   para: {
     borderBottom: "1px solid  #828791",
-
     textTransform: "capitalize",
-    // paddingLeft: "35px",
-    // paddingBottom: "10px",
   },
   noPara: {
     borderBottom: "none",
@@ -126,7 +123,7 @@ function Todo() {
         filteredTodos.map((cur, i) => {
           return (
             <div key={cur.id} className={classes.taskBox}>
-              <div>
+              <div className={classes.innerTaskbox}>
                 {!cur.completed ? (
                   <CheckCircle
                     onClick={() => {
@@ -143,6 +140,7 @@ function Todo() {
                   />
                 )}
                 <Typography
+                  variant="body2"
                   className={`${style.para} ${classes.para}`}
                   style={{
                     textDecoration: cur.completed ? "line-through" : "",
@@ -164,7 +162,7 @@ function Todo() {
           );
         })}
       {(!filteredTodos || filteredTodos.length == 0) && (
-        <Typography className={`${style.para} ${style.noPara}`}>
+        <Typography variant="body2" className={`${style.para} ${style.noPara}`}>
           You currently have 0 tasks. Add a task to get started!{" "}
         </Typography>
       )}

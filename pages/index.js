@@ -19,7 +19,7 @@ const useStyle = makeStyles({
     },
   },
   input: {
-    width: "300px",
+    width: "200px",
     color: "white",
 
     "&:hover": {

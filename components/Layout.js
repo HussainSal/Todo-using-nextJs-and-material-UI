@@ -7,7 +7,6 @@ function Layout(props) {
   return (
     <ThemeProvider theme={theme}>
       <section className={classes.section}>
-        {/* <Login /> */}
         <div className={classes.container}>{props.children}</div>
       </section>
     </ThemeProvider>
