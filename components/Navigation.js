@@ -62,7 +62,11 @@ function Layout() {
           {dayName}, {monthName} {day}
         </Typography>
 
-        <Typography className={style.activeTask} variant="body2">
+        <Typography
+          className={style.activeTask}
+          style={{ marginTop: "10px" }}
+          variant="body2"
+        >
           {`${(unCompletedTodos && unCompletedTodos.length) || 0} Active Task`}
         </Typography>
       </div>
