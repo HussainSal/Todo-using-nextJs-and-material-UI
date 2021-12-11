@@ -32,6 +32,15 @@
   padding-right: 20px;
 }
 
+.completedbox {
+  justify-content: space-between;
+  color: #828791;
+  padding-left: 10px;
+  margin-right: 20px;
+  overflow-y: scroll;
+  height: 80%;
+}
+
 .inputBox::-webkit-scrollbar {
   width: 12px;
   max-height: fit-content;
@@ -43,6 +52,21 @@
 }
 
 .inputBox::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+
+.completedbox::-webkit-scrollbar {
+  width: 12px;
+  max-height: fit-content;
+}
+
+.completedbox::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px grey; */
+  border-radius: 10px;
+}
+
+.completedbox::-webkit-scrollbar-thumb {
   background: white;
   border-radius: 10px;
 }
@@ -127,13 +151,6 @@
 .form {
   display: flex;
   align-items: center;
-}
-
-.completedbox {
-  justify-content: space-between;
-  color: #828791;
-  padding-left: 10px;
-  margin-right: 20px;
 }
 
 .item {
