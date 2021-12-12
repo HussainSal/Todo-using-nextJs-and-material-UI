@@ -1,8 +1,8 @@
 import classes from "./../styles/Index.module.css";
 import { makeStyles } from "@material-ui/styles";
-import { Typography } from "@material-ui/core";
+import { Button, Typography } from "@material-ui/core";
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { todoActions, getTodoData } from "../store/store";
 
@@ -43,6 +43,7 @@ const useStyle = makeStyles({
 });
 
 function Layout() {
+  const [active, setActive] = useState("Incomplete Tasks");
   const style = useStyle();
 
   const dispatch = useDispatch();
@@ -72,12 +73,35 @@ function Layout() {
       </div>
 
       <div className={classes.category}>
-        <Link className={classes.link1} href="/">
-          <p className={classes.paraLink}>Incomplete Tasks </p>
+        <Link className={classes.link} href="/">
+          <p
+            onClick={() => {
+              setActive("Incomplete Tasks");
+            }}
+            className={`${
+              active == "Incomplete Tasks"
+                ? classes.activeLink
+                : classes.paraLink
+            } `}
+          >
+            Incomplete Tasks
+          </p>
         </Link>
 
         <Link className={classes.link2} href="/completed">
-          <p className={classes.paraLink}> Completed Tasks </p>
+          <p
+            onClick={() => {
+              setActive("Completed Tasks");
+            }}
+            className={`${
+              active == "Completed Tasks"
+                ? classes.activeLink
+                : classes.paraLink
+            } `}
+          >
+            {" "}
+            Completed Tasks{" "}
+          </p>
         </Link>
       </div>
     </div>
